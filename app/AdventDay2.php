@@ -7,6 +7,7 @@ class AdventDay2
     const ADD_CODE = 1;
     const MULTIPLY_CODE = 2;
     const EXIT_CODE = 99;
+    const OP_CODE_LENGTH = 4;
 
     /**
      * @see https://adventofcode.com/2019/day/2
@@ -16,7 +17,7 @@ class AdventDay2
     public static function program1202(string $opCode): string
     {
         $codes = explode(',', $opCode);
-        for ($i = 0; $i < count($codes); $i+=4) {
+        for ($i = 0; $i < count($codes); $i += self::OP_CODE_LENGTH) {
             $operation = (int) $codes[$i];
             if ($operation === self::EXIT_CODE) {
                 break;
