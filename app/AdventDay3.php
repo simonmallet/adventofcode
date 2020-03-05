@@ -20,28 +20,28 @@ class AdventDay3
         $moveRight = function($spaces) use (&$visited, &$currentPositionX, &$currentPositionY) {
             for ($i = 1; $i <= $spaces; $i++) {
                 $currentPositionX++;
-                $visited["{$currentPositionX}.{$currentPositionY}"] = true;
+                $visited[] = "{$currentPositionX}.{$currentPositionY}";
             }
         };
 
         $moveUp = function($spaces) use (&$visited, &$currentPositionX, &$currentPositionY) {
             for ($i = 1; $i <= $spaces; $i++) {
                 $currentPositionY++;
-                $visited["{$currentPositionX}.{$currentPositionY}"] = true;
+                $visited[] = "{$currentPositionX}.{$currentPositionY}";
             }
         };
 
         $moveLeft = function($spaces) use (&$visited, &$currentPositionX, &$currentPositionY) {
             for ($i = 1; $i <= $spaces; $i++) {
                 $currentPositionX--;
-                $visited["{$currentPositionX}.{$currentPositionY}"] = true;
+                $visited[] = "{$currentPositionX}.{$currentPositionY}";
             }
         };
 
         $moveDown = function($spaces) use (&$visited, &$currentPositionX, &$currentPositionY) {
             for ($i = 1; $i <= $spaces; $i++) {
                 $currentPositionY--;
-                $visited["{$currentPositionX}.{$currentPositionY}"] = true;
+                $visited[] = "{$currentPositionX}.{$currentPositionY}";
             }
         };
 

@@ -44,8 +44,8 @@ class AdventDay3Test extends TestCase
     private function getDistanceToCenter(array $nodesA, array $nodesB)
     {
         $distanceToCenter = null;
-        foreach (array_intersect_key($nodesA, $nodesB) as $key => $value) {
-            $position = explode('.', $key);
+        foreach (array_intersect($nodesA, $nodesB) as $key => $value) {
+            $position = explode('.', $value);
             $positionDistance = abs($position[0]) + abs($position[1]);
             if ($distanceToCenter === null || $positionDistance < $distanceToCenter) {
                 $distanceToCenter = $positionDistance;
